@@ -1,0 +1,63 @@
+Ejemplos de Algoritmo
+
+Hacer un Hamburguesa:
+
+Entrada
+Gas, cocina, fósforos
+Pan, hamburguesa, mayonesa, plancha, mostaza, lechuga
+
+Proceso
+1.Cortar pan
+2.poner la hamburguesa
+3.poner ingredientes
+
+Salida
+Hamburguesa
+
+Cambiar rueda a un auto:
+
+Entrada
+Gata hidráulica, llave, repuesto de llanta
+
+Proceso
+1.Verificar vehículo
+2.verificar ruedas
+3.verificar llaves
+4.soltar tuercas
+5.levantar auto
+6.sacar rueda
+7.cambiar rueda
+
+Salida
+Auto con rueda cambiada.
+
+Cambiar pañal a un bebé:
+
+Entrada
+Pañal, aceite de bebé, talco, toallitas húmedas, una toalla, ropa limpia
+
+Proceso
+1.Desvestir al bebé
+2.se saca el pañal sucio
+3.limpiar al bebé
+4.se echa talco
+5.se reemplaza el pañal
+Salida
+Bebé limpio
+
+Cambiar clave de correo electrónico
+
+Entrada
+Computador, internet
+Proceso
+1.Encender pc
+2.verificar internet
+3.entrar al correo
+4.ingresar datos
+5.ingresar a preferencias
+6.cambio de clave
+7.ingresar clave
+8.cambiar clave
+
+Salida
+Cambio de clave exitosa
