@@ -1,6 +1,6 @@
 Ejemplos de Algoritmo
 
-Hacer un Hamburguesa:
+1)Hacer un Hamburguesa:
 
 Entrada
 Gas, cocina, fósforos
@@ -14,7 +14,7 @@ Proceso
 Salida
 Hamburguesa
 
-Cambiar rueda a un auto:
+2)Cambiar rueda a un auto:
 
 Entrada
 Gata hidráulica, llave, repuesto de llanta
@@ -31,7 +31,7 @@ Proceso
 Salida
 Auto con rueda cambiada.
 
-Cambiar pañal a un bebé:
+3)Cambiar pañal a un bebé:
 
 Entrada
 Pañal, aceite de bebé, talco, toallitas húmedas, una toalla, ropa limpia
@@ -45,10 +45,11 @@ Proceso
 Salida
 Bebé limpio
 
-Cambiar clave de correo electrónico
+4)Cambiar clave de correo electrónico
 
 Entrada
 Computador, internet
+
 Proceso
 1.Encender pc
 2.verificar internet
