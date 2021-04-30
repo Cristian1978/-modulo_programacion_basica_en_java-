@@ -1,0 +1,86 @@
+-seleccionar empleado
+-ingresar el valor bruto
+-seleccionar afp
+-seleccionar salud
+-ingresar cargas
+-realizar los descuentos
+
+
+entrada
+variables
+nombre=string
+rut=string
+cargo=string
+afp=string
+ssalud=string
+constantes
+porc afp=float
+porc sssalud=float
+
+-seleccionar empleado
+-ingresar el valor bruto
+-seleccionar afp
+-seleccionar salud
+-ingresar cargas
+-realizar los descuentos
+
+num boleta integer variable
+id emisor string variable
+nombre emisor string variable
+giro emisor string variable
+direccion emisor string variable
+
+nombre receptor string variable
+domicilio receptor string variable
+fecha boleta string variable
+rut receptor string variable
+motivo string variable
+total honorario integer variable
+descuento boleta float constante
+total liquido integer variable
+
+-selecciona usuario emisor
+-selecciona receptor
+-ingresa motivo boleta
+-ingreso monto
+-calcular porc impuesto
+-mostrar total liq (total boleta -11.5%)
+confirmar emisión
+entrada
+variables
+nombre=string
+rut=string
+cargo=string
+afp=string
+ssalud=string
+porcafp=float
+porssalud=float
+sueldo=long
+horasext=int
+valorhext=double
+bonocolac=int
+bonomov=int
+cargfam=int
+valorcf=double
+falor
+
+proceso
+selecciona empleado ingresando rut
+valorentra=sueldo+(horasext*valorhext)+bonocolac+bonomov+(cargfam*valorcf)
+valordesc=(sueldo*porcafp)+(sueldo*porssalud)
+valorliq=valorentra-valodesc
+
+salida
+
+nombre
+rut
+afp
+porcafp
+ssalud
+porssalud
+sueldo
+numero horas extras = horasext
+valor x horas extras= horasext*valorhext
+bono de colacion
+
+
