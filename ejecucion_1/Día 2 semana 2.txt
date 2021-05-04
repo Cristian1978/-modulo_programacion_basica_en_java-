@@ -1,0 +1,190 @@
+
+
+
+En cada ejercicio determinar las variables y/o constantes involucradas.
+
+
+1. Realizar un algoritmo en pseudocódigo que permita sumar dos números.
+
+ a + b = x ?
+variables
+ingresar numero1, num2,suma
+inicio
+escribir"introdusca primer número(entero):"
+leer número1
+escribir"introdusca segundo número(entero):"
+leer número2
+suma=num1+num2
+escribir"El resultado de la suma es:", suma
+fin
+
+2. Realizar un algoritmo en pseudocódigo que permita calcular el promedio de 3 notas.
+
+(a + b + c)/3 = x 
+
+(a + b + c)/3 = x
+
+ingresar nota 1, 
+ingresar nota 2,
+ingresar nota 3,
+Sumar notas,
+Dividir resultado por 3 
+Imprimir resultado
+ 
+Variable: nota 1, nota 2, nota 3 , resultado de la suma de los números 1, 2 y 3 y resultado final
+Constante: división de la suma de números
+
+
+
+3. Realizar un algoritmo en pseudocódigo que permita calcular el cuadrado de un número.
+
+(a * a) = x
+
+variable numero1
+variable resultado
+inicio
+escribir "ingrese un numero: "
+leer numero1
+
+resultado = numero1 * numero1
+escribir "el cuadrado de ", numero1, " es: " , resultado
+fin
+
+Variable número 1, número 2, número 3 , resultado de la suma de los números 1, 2 y 3 y resultado final
+
+Constante división de la suma de números
+
+
+variables 
+ ingresar cantidad de inversion;c (num1)
+constante
+ingresar porcentaje; (num2)
+
+leer porcentaje 1
+leer porcenaje 2
+
+sumar
+
+
+Ejercicios
+1. Realizar un algoritmo en pseducodigo que pida ingresar el modelo y la marca de un vehiculo y me muestre los datos ingresados
+
+
+Variables
+    modelo_vehiculo
+    marca_vehiculo 
+   
+Inicio
+Escribir"modelo de vehiculo:" string
+    Leer Modelo de vehiculo
+Escribir "marca de vehiculo:" string
+    Leer marca_vehiculo
+
+
+
+
+2. Realizar un algoritmo en pseudocódigo que permita calcular el porcentaje solicitado de un número ingresado.
+
+
+Datos de entrada
+Número al cual deseamos sacar el porcentaje.
+Valor o porcentaje que deseamos obtener.
+Proceso
+Obtener el porcentaje con la fórmula: Porcentaje = (valor x 100) / total
+Salida
+Mostrar el valor correspondiente al porcentaje.
+
+def numero, porcentaje
+
+var numero 
+var porcentaje
+var calculado
+
+escribir "ingrese numero"
+numero = leer
+escribir "ingrese el porcentaje que desea calcular como numero entero"
+porcentaje = leer
+
+calculado = numero  * (porcentaje/100)
+
+escribir "el porcetaje equivale a: " + calculado
+
+3. Realizar un algoritmo en pseudocódigo para resolver el siguiente problema: un vendedor recibe un sueldo base más un 10% de comisión de sus ventas. 
+El vendedor desea saber cuánto dinero obtendrá por concepto de comisiones por tres ventas que realiza en el mes y el total que recibirá en el mes tomanndo en cuenta su sueldo base y comisiones.
+
+Def sueldoBase, sueldoFinal,comisiones,ventas, procentaje
+
+inicio
+    var int sueldoBase
+    var int sueldoFinal
+    var int comisiones
+    var int venta1,venta2,venta3
+    const float porcentaje
+
+    comisiones =0 
+    porcentaje = 0.1
+
+    escribir "ingrese monto venta 1 "
+    venta1= leer
+    escribir "ingrese monto venta 2 "
+    venta2= leer
+    escribir "ingrese monto venta 3 "
+    venta3= leer
+
+    comisiones = (venta1+venta2+venta3)*porcentaje
+
+    sueldoFinal = sueldoBase +comisiones
+
+    escribir "Su sueldo final es : "+ sueldoFinal
+
+fin
+
+
+ealizar un algoritmo que intercambie los valores de dos variables.
+por ejemplo: 
+al inicio del problemas las variables son A=2 y B=3
+Luego al final del algorítmo A=3 B=2			
+
+
+
+algoritmo Intercambio_de_los_valores_de_dos_variables
+
+variables
+   entero auxiliar, v1, v2 
+
+inicio
+   escribir( "Introduzca el valor v1: " )
+   leer( v1 )
+   escribir( "Introduzca el valor de v2: " )
+   leer( v2 )
+   escribir( "Intercambiando los valores..." )
+
+   auxiliar ← v1
+   v1 ← v2
+   v2 ← auxiliar
+
+   escribir( "Ahora, el valor de v1 es: ", v1 )
+   escribir( "Ahora, el valor de v2 es: ", v2 )
+fin
+
+
+a=3
+b=2
+a=a+b
+b=a-b
+a=a-b
+a
+b
+
+inicio
+
+definir a, b
+
+escribir"ingrese valor 1"
+a = leer valor
+escribir"ingrese valor 2"
+b = leer valor
+
+a=a+b
+b=a-b
+a=a-b
