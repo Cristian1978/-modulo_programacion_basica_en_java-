@@ -1,0 +1,231 @@
+1. Determinar si un número ingresado es par o impar
+
+Variables 
+Números par (variable)
+Números Impar (variable)
+
+1.Inicio 
+Escribir :”ingresar número”
+Sí (número es par) escribir par 
+Si no Escribir impar
+Fin si  
+print:"número par o impar"
+
+2. Determinar Determinar si un núm ingresado es múltiplo o no de 2
+
+Varables
+Núm Múltiplo de 2 (constante)
+Núm No Múltiplo de 2
+ 
+ Inicio
+ Escribir : 
+Escribir "Ingrese Numero: " 
+Leer num
+mensaje<-0
+Si num 2 = 0 Entonces
+ Escribir "El numero es multiplo de 2"
+
+ mensaje<-1
+Fin Si
+
+Inicio
+Iniciar variable n°1
+Solicitar la introducción de tres valores distintos
+Leer los valores
+Asignar a la variable A
+Bool par = A % 2 == 0
+Si par
+Print(“el numero es par”)
+De.lo contrario
+Print(“el numero es impar”)
+Fin.Si
+Fin
+
+INICIO
+Ingrese un numero a
+Leer ingrese un numero a
+Numero mod = %2
+SI (resultado a%2 == 0)
+Print "el número es par"
+SI NO, print "el numero es impar"
+FIN
+
+crear algoritmo que permita determinar cual es el mayor de 2 numeros ingresados
+
+inicio
+ingrese n1,n2,mayor=0
+leer n1,n2
+
+si n1>n2
+mayor=n1
+sino
+mayor=n2
+fin si
+imprima "el numero mayor es: "
+imprima mayor
+fin
+
+Escribir "Ingrese el Primer Valor"
+	Leer a
+	Escribir "Ingrese el segundo valor"
+	Leer b
+	Si (a>b) Entonces
+		Escribir ,a," = Mayor "
+ 
+	Sino
+		Si (a<b) Entonces
+			Escribir b," = Mayor"
+		Sino
+ 
+		Fin Si
+	Fin Si
+
+
+Crear un algoritmo para resolver el siguiente problema:
+
+1. Que permita determinar si la suma de dos números ingresados es positiva, negativa o cero.
+
+variables: número1 numero2 suma entero
+ 
+inicio
+   escribir "Ingrese un número” 
+   leer número1
+ 
+escribir "Ingrese otro número” 
+   leer número2
+
+Suma= numero1+numero2
+
+Si suma>0  entonces
+Escribir "suma es positiva"
+sino
+si suma=0  entonces
+Escribir "suma=0"
+sino
+Escribir "suma es negativa"
+fin si
+Fin si
+
+
+2. Que indique si un número es divisible por 2 y por 5 al mismo tiempo.
+
+Inicio
+Num=int
+Escribe "Escribe número:"
+Leer num
+si num%2 ==0 y num%5==0
+Escribir "numero es divisible en 2 y 5"
+sino
+Escribe "numero no es divisible en 2 y 5"
+Fin si
+Fin
+   
+   
+   
+
+3. Que permita determinar cuál es mayor de 3 números ingresados.
+INICIO
+
+1.- Solicitar a usuario n1, n2 y n3
+
+2.- Comparar n1 con n2
+
+3.- Si n1>n2 y n1>n3 entonces
+  Escribir  "numero mayor", n1
+  sino
+  si n2>n3
+  Escribir "numero mayor", n2
+  sino
+  escribir "numero mayor", n3
+  fin si
+fin si
+Si n1 > n2
+
+        Si n1 > n3
+
+                     Imprimir n1
+***esta parte esta demas*****
+                Si no
+
+                     Imprimir n3        
+************************
+     Si no, comparar n2 con n3 
+
+                Si n2 > n3
+
+                     Imprimir n2
+
+                Si no
+
+                     Imprimir n3
+
+FIN
+
+3.- Si n1 > n2
+
+     Si n1 > n3
+
+     Imprimir n1
+
+     Si no
+
+    Imprimir n3        
+
+     Si no, comparar n2 con n3 
+
+       Si n2 > n3
+
+       Imprimir n2
+
+       Si no
+
+     Imprimir n3
+fin
+
+
+NUM1 = a
+NUM2 = b
+Sumar = c
+Resultado suma = rc
+Restar = d
+Resultado resta = rr
+
+INICIO
+Print: "Por favor, ingresar dos números"
+Escribe NUM1 (a)
+Leer NUM1 (a)
+Escribe NUM2 (b)
+Leer NUM2 (b)
+Print: "escoja c para sumar los números o d para restarlos"
+SI (escoge c), print: "usted selecciono sumar"
+(a+b), + rc print: "es el resultado de su suma"
+SI NO, print: "usted selecciono restar"
+(a-b), +rr print: "es el resultado de su resta"
+FIN SI
+FIN
+
+
+Ejercicio: Buscar información sobre los algoritmos de búsqueda y ordenamiento
+
+BÚSQUEDA SECUENCIAL
+
+Consiste en ir comparando el elemento que se busca con cada elemento del arreglo
+ hasta que se encuentra.
+Con mucha frecuencia los programadores trabajan con grandes cantidades de datos
+ almacenados en arreglos y registros, y por ello será necesario determinar
+ si un arreglo contiene un valor que coincida con un cierto valor clave.
+El proceso de encontrar un elemento específico de un arreglo se denomina búsqueda.
+
+
+BÚSQUEDA BINARIA
+
+Para utilizar este algoritmo, el arreglo debe estar ordenado
+ y no se deben repetir los elementos. La búsqueda binaria consiste
+ en dividir el arreglo en dos subarreglos más pequeños,y
+ comparar el elemento con el del centro. Si coinciden,la
+ búsqueda se termina. En cada iteración el arreglo se divide en dos.
+
+EJEMPLO
+
+Se intenta buscar el elemento 3 en el arreglo {1,2,3,4,5,6,7,8,9}
+ se realizaran los siguientes pasos.
