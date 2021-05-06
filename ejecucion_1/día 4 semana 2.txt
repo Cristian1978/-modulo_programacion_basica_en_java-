@@ -1,0 +1,93 @@
+para (i=1;i<=100;i++)
+escribir i
+
+para (i=100;i>0;i--)
+escribir i
+
+variable cant_numeros
+variable i
+variable suma
+variable numero
+i=1
+numero=0
+escribir "ingrese cantidad de numeros a ingresar"
+leer cant_numeros
+mientras i<cant_numeros
+escribir "ingrese un numero "
+leer numero
+si numero modulo 2 = 0 entonces
+suma=suma+numero
+
+Ejercicio grupal 2: 
+
+Integrantes: Cristian Maturana, Isabel Koc Medina y Leonardo Rodenas
+E-mail: cristianmrec@gmail.com, ysabel_koc@yahoo.com
+
+Algoritmo en pseudocódigo para los siguientes problemas utilizando las estructuras iterativas (mientras - hacer mientras - para)
+
+- Se ingresa una cantidad de números, calcular la suma de todos los números pares ingresados y la multiplicación de todos los impares ingresados, además determinar si de los números ingresados fueron mas pares o impares (la cantidad de números que se ingresan deben ser determinada por el usuario).
+
+Var:
+
+Numero
+Cantidad_Num
+Suma_Numpar = 0
+Suma_Numimpar = 0
+Cuentapar = 0
+Cuentaimpar = 0
+Multi_Numimpar = 1
+Cuenta_Numimpar = 0
+I = 1
+
+INICIO
+Escribe Cantidad_Num
+Leer Cantidad_Num
+Mientras (I <=Cantidad_Num)
+Escribe Numero
+Leer Numero
+SI (Numero%2 ==0), HACER
+Escribe Suma_Numpar = Suma_Numpar+Numero
+Cuentapar++
+SI NO, Escribe Mul_Numimpar = Mul_Numimpar*Numero
+Cuenta_impar++
+FIN SI
+I++
+FIN MIENTRAS
+Si Cuenta_par > Cuenta_impar
+Escribe Cuenta_par
+Print: "se ingresaron mas números par"
+SI NO, Cuenta_impar
+Print: "se ingresaron mas números impar"
+FIN
+
+inicio
+numeroActual
+totalNumeros
+menor
+imprimir:"ingrese el total de numeros"
+leer totalNumeros
+para(i=0;i<totalNumeros;i++)
+imprimir :ingrese un numero
+leer numeroActual
+si(i==0)
+{
+menor=numeroActual
+}
+si(numeroActual<menor){
+menor=numeroActual
+}
+print:"el menor de los numeros ingresados es" + menor
+
+fin
+
+Ejercicio
+
+Una modista, para realizar sus prendas de vestir, encarga las telas al extranjero.
+para cada pedido, tiene que proporcionar las medidas de la tela en pulgadas, pero ella generalmente
+las tiene en metros. Realice un algoritmo para ayudar a resolver el problema, determinando cuántas pulgadas
+debe pedir con base de los metros que requiere. Represéntelo mediante el diagrama de flujo y el pseudocódigo (1 pulgada = 0.0254 m).
+
+
+
+
+
