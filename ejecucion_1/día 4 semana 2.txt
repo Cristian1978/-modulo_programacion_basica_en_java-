@@ -87,7 +87,13 @@ para cada pedido, tiene que proporcionar las medidas de la tela en pulgadas, per
 las tiene en metros. Realice un algoritmo para ayudar a resolver el problema, determinando cuántas pulgadas
 debe pedir con base de los metros que requiere. Represéntelo mediante el diagrama de flujo y el pseudocódigo (1 pulgada = 0.0254 m).
 
-
+Algoritmo detarea
+	definir metros,pulgadas como real
+	Escribir "Escribe los metros "
+	Leer metros
+	pulgadas = metros * 39.37
+	Escribir "Los metros convertidos a pulgadas es: ",pulgadas
+FinAlgoritmo
 
 
 
