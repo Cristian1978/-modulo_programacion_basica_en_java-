@@ -1,0 +1,169 @@
+Ejercicio 8)
+
+1)
+Algoritmo sin_titulo
+definir cant_personas Como Entero
+definir cant_km Como Entero
+definir costoA como entero
+definir costoB como entero
+definir costoC como entero
+escribir "ingrese cantidad de personas: "
+leer cant_personas
+escribir "ingrese cantidad de Km: "
+leer cant_km
+costoA=cant_km*200
+costoB=cant_km*250
+costoC=cant_km*300
+si cant_personas<20 entonces
+cant_personas=20
+FinSi
+escribir " costo por persona bus A :", costoA
+escribir " costo total bus A :", costoA*cant_personas
+escribir " costo por persona bus B :", costoB
+escribir " costo total bus B :", costoB*cant_personas
+escribir " costo por persona bus C :", costoC
+escribir " costo total bus C :", costoC*cant_personas
+
+2)
+mprimir "ingrese cantidad de personas: (debe ser superior a 20 personas"
+Leer cantidadp
+si cantidadp<20
+cantidadp=20
+fin si
+Imprimir "tipo de autobus: (A,b,c) y num. de km recorridos:"
+Leer tipoau,km
+para i=1a cantidadp hacer
+Segun (tipoau)
+tipoau == "A"hacer:
+costoFinal=costofinal*(200*km)
+tipoau == "b"hacer:
+costoFinal=costofinal*(250*km)
+tipoau == "c"hacer:
+costoFinal=costofinal*(300*km)
+FinSegun
+fin para
+imprimir "costo viaje", costofinal
+FinAlgoritmo
+
+Ejercicio 9)
+
+"El náufrago satisfecho" ofrece hanburguesas sencillas, dobles y triples, las cuales tienen un costo de $2000.-, $2500.-
+respectivamente. La empresa acepta tarjetas de crédito con un cargo de 5% sobre la compra.
+Suponiendo que los clientes sólo un tipo de hamburguesa, realice un algoritmo para determinar
+cuánto de be pagar una persona por N hamburguesas. Represéntelo mediante diagrama de flujo y
+pseudocódigo
+
+
+Proceso ElNaufragoSatisfecho
+    pago <- 0;
+    Escribir Sin Saltar "Ingresa el valor de n:";
+    Leer n;
+    Para i<-1 Hasta n Con Paso 1 Hacer
+        Escribir "PROCESO ", i;
+        Escribir "Selecciona el valor de tipo de hamburguesa.";
+        Escribir "    1.- S sencilla";
+        Escribir "    2.- D doble";
+        Escribir "    3.- T triples";
+        Escribir Sin Saltar "    :";
+        Repetir
+            Leer tipo_de_hamburguesa;
+            Si tipo_de_hamburguesa<1 O tipo_de_hamburguesa>3 Entonces
+                Escribir Sin Saltar "Valor incorrecto. Ingrésalo nuevamente.: ";
+            FinSi
+        Hasta Que tipo_de_hamburguesa>=1 Y tipo_de_hamburguesa<=3;
+        costo <- 0;
+        Si tipo_de_hamburguesa = 1 Entonces
+            costo <- 1000;
+        FinSi
+        Si tipo_de_hamburguesa = 2 Entonces
+            costo <- 1500;
+        FinSi
+        Si tipo_de_hamburguesa = 3 Entonces
+            costo <- 2800;
+        FinSi
+        Escribir "Selecciona el valor de forma de pago.";
+        Escribir "    1.- Efectivo";
+        Escribir "    2.- Tarjeta";
+        Escribir Sin Saltar "    :";
+        Repetir
+            Leer forma_de_pago;
+            Si forma_de_pago<1 O forma_de_pago>2 Entonces
+                Escribir Sin Saltar "Valor incorrecto. Ingrésalo nuevamente.: ";
+            FinSi
+        Hasta Que forma_de_pago>=1 Y forma_de_pago<=2;
+        Si forma_de_pago = 1 Entonces
+            cargo <- 0;
+        SiNo
+            cargo <- costo*0.05;
+        FinSi
+        pago <- pago+costo+cargo;
+        Escribir "Valor de cargo: ", cargo;
+        Escribir "Valor de costo: ", costo;
+        Escribir "";
+    FinPara
+    Escribir "Valor de pago: ", pago;
+FinProceso
+
+Variables
+
+NumeroH, TipoH, Total, CostoI, medioP
+
+Algoritmo sin_titulo
+	Definir n,tarjeta,hamburguesa como entero
+	Definir total Como Real
+	Escribir Sin Saltar "Cuantas hamburguesas desea comprar"
+	leer n
+	para x = 1 hasta n hacer
+		Escribir "Seleccione el numero del tipo de hamburguesa: ";
+		Escribir " 1.- S sencilla $ 2000"
+		Escribir " 2.- D doble $2500"
+		Escribir " 3.- T triples $2800"
+		leer hamburguesa
+		Segun hamburguesa Hacer
+			
+			1:
+				
+				total = total + 20
+				
+			2:
+				
+				total = total + 25
+				
+			3:
+				
+				total = total + 28
+				
+			De Otro Modo:
+				
+				Escribir "Ese numero no existe en el menu"
+		fin segun
+	Fin para
+	
+	Escribir "Elige el tipo de pago:"
+	
+	Escribir " 1.- Efectivo"
+	
+	Escribir " 2.- Tarjeta de credito o debito"
+	
+	leer tarjeta
+	Segun tarjeta Hacer
+		
+		1:
+			
+			Escribir "El total a pagar es de: ",total," pesos"
+			
+		2:
+			
+			total = total + (total * .05)
+			
+			Escribir "El total a pagar es de: ",total," pesos"
+			
+		De Otro Modo:
+			
+			Escribir "Elige un numero correcto"
+			
+	Fin Segun
+	
+FinProceso
+
+
