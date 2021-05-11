@@ -1,0 +1,205 @@
+
+Ejercicio 12)
+
+El consultorio del Dr Lorenzo T Mata Lozano tiene como política cobrar la consulta con
+base en el número de cita, de la siguiente forma
+•
+Las tres primeras citas a $200.00 c/u.
+•
+Las siguientes dos citas a $150.00 c/u.
+•
+Las tres siguientes citas a $100.00 c/u.
+•
+Las restantes a $50.00 c/u, mientras dure el tratamiento.
+Se
+requiere un algoritmo para determinar
+•
+Cuánto pagará el paciente por la cita.
+•
+El monto de lo que ha pagado el paciente por el tratamiento.
+Para
+la solución de este problema se requiere saber qué número de cita que se
+efectuará, con el cual se podrá determinar el costo que tendrá la consulta y cuánto se ha
+gastado en el tratamiento
+
+
+Algoritmo Dr_Lorenzo
+	Definir n Como Entero
+	Definir pago,total Como Real
+	Escribir 'Ingresa el numero de citas'
+	Leer n
+	Si n<=3 Entonces 
+		pago <- 200
+		total <- n*pago
+	SiNo
+		Si n<=5 Entonces 
+			pago <- 150
+			total <- ((n-3)*pago)+600
+		SiNo
+			Si n<=8 Entonces 
+				pago <- 100
+				total <- ((n-5)*pago)+900
+			SiNo
+				pago <- 50
+				total <- ((n-8)*pago)+1200
+			FinSi
+		FinSi
+	FinSi
+	Escribir 'El pago de la cita es: $',pago
+	Escribir 'Lo que ha pagado por el tramiento es: $',total
+FinAlgoritmo
+
+Ejercicio 13)
+
+Fábricas “El cometa” produce artículos con claves 1 2 3 4 5 y 6 Se requiere un
+algoritmo para calcular los precios de venta, para esto hay que considerar lo siguiente
+Costo
+de producción materia prima mano de obra gastos de fabricación Precio de
+venta costo de producción 45 de costo de producción El costo de la mano de obra
+se obtiene de la siguiente forma para los productos con clave 3 o 4 se carga 75 del
+costo de la materia prima para los que tienen clave 1 y 5 se carga 80 y para los que
+tienen clave 2 o 6 85
+Para
+calcular el gasto de fabricación se considera que si el artículo que se va a producir
+tiene claves 2 o 5 este gasto representa 30 sobre el costo de la materia prima si las
+claves son 3 o 6 representa 35 si las claves son 1 o 4 representa 28 La materia
+prima tiene el mismo costo para cualquier clave Realizar el Pseudocodigo y diagrama de
+
+
+Algoritmo El_Cometa
+	Escribir 'Ingresa la clave del articulo'
+	Leer clave
+	Si clave>=1 Y clave<=6 Entonces
+		Escribir 'Ingresa el costo de la materia prima'
+		Leer materia_prima
+		Si clave==3 O clave==4 Entonces
+			mano_obra <- materia_prima*.75
+		SiNo
+			Si clave==1 O clave==5 Entonces
+				mano_obra <- materia_prima*.80
+			SiNo
+				mano_obra <- materia_prima*.85 // claves 2 o 6
+			FinSi
+		FinSi
+		Si clave==2 O clave==5 Entonces
+			gasto_fabricacion <- materia_prima*.30
+		SiNo
+			Si clave==3 O clave==6 Entonces
+				gasto_fabricacion <- materia_prima*.35
+			SiNo
+				gasto_fabricacion <- materia_prima*.28
+			FinSi
+		FinSi
+		costo_produccion <- materia_prima+mano_obra+gasto_fabricacion
+		precio_venta <- costo_produccion+(costo_produccion*.45)
+		Escribir 'El gasto de mano de obra para el articulo con clave ',clave,' es: $',mano_obra
+		Escribir 'El gasto de fabricacion para el articulo con clave ',clave,' es: $',gasto_fabricacion
+		Escribir 'El costo de produccion para el articulo con clave ',clave,' es: $',costo_produccion
+		Escribir 'El precio de venta para el articulo con clave ',clave,' es $',precio_venta
+	SiNo
+		Escribir 'Ingresa una clave correcta'
+	FinSi
+FinAlgoritmo
+
+
+Ejercicio 14)
+
+Se requiere un algoritmo para obtener la suma de diez cantidades mediante la utilización
+de un ciclo Para Realice el diagrama de flujo y el pseudocódigo
+
+
+Algoritmo Suma_numeros
+	Definir x Como Entero
+	Definir n,suma Como Real
+	suma <- 0
+	Para x<-1 Hasta 10 Hacer
+		Escribir 'Ingresa un numero'
+		Leer n
+		suma <- suma+n
+	FinPara
+	Escribir 'La suma de los 10 numeros es: ',suma
+FinAlgoritmo
+
+Ejercicio 15)
+
+Se
+requiere un algoritmo para obtener la edad promedio de un grupo de N alumnos
+Realice el diagrama de flujo y el pseudocódigo
+
+Algoritmo Promedio_alumnos
+	Definir total,edad,suma Como Entero
+	Definir promedio Como Real
+	Escribir 'Ingresa el total de alumnos'
+	Leer total
+	x <- 1
+	suma <- 0
+	Mientras x<=total Hacer
+		Escribir 'Ingresa tu edad'
+		Leer edad
+		suma <- suma+edad
+		x <- x+1
+	FinMientras
+	Escribir 'El promedio de edades de todo el grupo es: ',suma/total
+FinAlgoritmo
+
+Ejercicio 16)
+
+
+Se requiere un algoritmo para determinar cuánto ahorrará una persona en un año, si al
+final de cada mes deposita variables cantidades de dinero además, se requiere saber
+cuánto lleva ahorrado cada mes Realice el diagrama de flujo y el pseudocódigo
+
+Algoritmo Ahorro_anual
+	Definir sueldo,ahorro Como Real
+	Escribir 'Ingresa tu sueldo'
+	Leer sueldo
+	ahorro <- ((sueldo*.15)*4)*12
+	Escribir 'Tu ahorro semanal es: $',sueldo*.15
+	Escribir 'Tu ahorro mensual es: $',(sueldo*.15)*4
+	Escribir 'EL sueldo en un año es: $',ahorro
+FinAlgoritmo
+
+Ejercicio 17)
+
+Se requiere un algoritmo para determinar, de N cantidades, cuántas son menores o
+iguales a cero y cuántas mayores a cero Realice el diagrama de flujo y el pseudocódigo
+
+Algoritmo sin_titulo
+	Escribir "Cuantos numeros decea ingresar"
+	Leer n
+	para x=1 hasta n Hacer
+		Escribir "Dame un numero"
+		leer numero x
+		si numero == 0 Entonces
+			contador = contador + 1
+		FinSi
+	FinPara
+	Escribir "El numero de 0 ingresados es: ",contador
+FinAlgoritmo
+
+Ejercicio 18)
+
+
+Una empresa tiene el registro de las horas que trabaja diariamente un empleado durante
+la semana (seis días) y requiere determinar el total de éstas, así como el sueldo que
+recibirá por las horas trabajadas Realice un algoritmo
+
+Algoritmo registro_horas
+	Definir x, horas Como Entero
+	Definir pago, total como real
+	Escribir "Ingresa el pago por hora"
+	leer pago
+	x = 1
+	total = 0
+	Mientras x <= 6 Hacer
+		Escribir "Ingresa las horas del dia ",x
+		leer horas
+		total = total + horas
+		sueldo = sueldo + (horas * pago)
+		x = x + 1
+	FinMientras
+	Escribir "El sueldo total por ",total," es: $",sueldo
+FinAlgoritmo
+
+
+
