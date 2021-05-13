@@ -1,0 +1,213 @@
+Ejercicios 13/5/2021
+
+Ejercicio 1)
+
+package lalangostaahumada;
+
+1.- langosta ahumada
+2.- vinicultores
+3.- paseo de estudio, pago alumno y pago a compañia
+4.- chismefon
+5.- usar iterativas para mostrar numeros de dos en dos (lo que uno escoja)
+6.- Calcular el promedio de N notas ingresadas por el usuario (usar ciclos iterativos)
+
+
+import java.util.Scanner;
+
+
+public class LaLangostaAhumada {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+     int n;
+		double total;
+		System.out.println("Ingresa el numero de platillos");
+		 Scanner lector=new Scanner(System.in);
+                  n=lector.nextInt();
+		if (n>300) {
+			total = 7500*n;
+		} else {
+			if (n>200 && n<=300) {
+				total = 8500*n;
+			} else {
+				total = 9500*n;
+			}
+		}
+		System.out.println("El total a pagar es: $"+total);   // TODO code application logic here
+    }
+    
+}
+
+Ejercicio 2)
+
+package vinicultores;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+// 13/5/2021
+public class Vinicultores {
+
+    public static void main(String[] args) {
+     BufferedReader bufEntrada = new BufferedReader(new InputStreamReader(System.in));
+		int kilos;
+		double precio;
+		int tamano;
+		int tamaño;
+		String tipo;
+		double total;
+		System.out.println("Ingresa los kilos de uvas");
+		kilos = Integer.parseInt(bufEntrada.readLine());
+		System.out.println("Ingresa el precio por kilo");
+		precio = Double.parseDouble(bufEntrada.readLine());
+		System.out.println("Ingresa el tipo de uva: A o B");
+		tipo = bufEntrada.readLine();
+		System.out.println("Ingresa el tamaño de la uva: 1 o 2");
+		tamano = Integer.parseInt(bufEntrada.readLine());
+		if (tipo.equals("A")) {
+			if (tamano==1) {
+				precio = precio+20;
+			} else {
+				precio = precio+30;
+			}
+		} else {
+			if (tamano==1) {
+				precio = precio-30;
+			} else {
+				precio = precio-50;
+			}
+		}
+		total = precio*kilos;
+		System.out.println("La ganancia por "+kilos+" kilos de uva es: $"+total);
+        
+    }
+    
+}
+
+Ejercicio 3)
+
+package paseo_de_curso.pkg2;
+
+import java.util.Scanner;
+
+// 13/5/2021
+public class Paseo_De_Curso {
+
+   
+    public static void main(String[] args) {
+// TODO code application logic here
+System.out.println("ingrese cantidad de alumnos");
+System.out.println("ingrese una nota");
+Scanner lector=new Scanner(System.in);
+int cantidadAlumnos=lector.nextInt();
+int rango=0,costoTotal=0,costoPorAlumno=0;
+if(cantidadAlumnos>100){rango=1;}
+if(cantidadAlumnos>50&&cantidadAlumnos<99){rango=2;}
+if(cantidadAlumnos>30&&cantidadAlumnos<49){rango=3;}
+if(cantidadAlumnos<30){rango=0;}
+
+switch (rango){
+case 1 :
+costoPorAlumno=6500;
+costoTotal=cantidadAlumnos*costoPorAlumno;
+break;
+case 2 :
+costoPorAlumno=7000;
+costoTotal=cantidadAlumnos*costoPorAlumno;
+break;
+case 3 :
+costoPorAlumno=9500;
+costoTotal=cantidadAlumnos*costoPorAlumno;
+break;
+default:
+costoPorAlumno=400000/cantidadAlumnos;
+costoTotal=400000;
+break;
+}
+System.out.println("el costo por alumno es " + costoPorAlumno);
+System.out.println("el costo por total es " + costoTotal);
+}
+
+}
+
+Ejercicio 4)
+
+
+package compañia_chismefon;
+
+import java.util.Scanner;
+
+
+public class Compañia_Chismefon {
+//13/5/2021
+  public static void main(String[] args) {
+
+System.out.println("ingrese cantidad de minutos hablados");
+Scanner lector=new Scanner(System.in);
+int cantidadMin=lector.nextInt();
+float valorFinal,costoMinutos=0F;
+if(cantidadMin<=5){costoMinutos=cantidadMin*100;}
+if(cantidadMin>5&&cantidadMin<=8){costoMinutos=((cantidadMin-5)*80)+500;}
+if(cantidadMin>8&&cantidadMin<=10){costoMinutos=((cantidadMin-8)*70)+740;}
+if(cantidadMin>10){costoMinutos=((cantidadMin-10)*50)+880;}
+System.out.println("ingrese el dia de la semana en el que se realizo la llamada");
+String dia=lector.next();
+
+if("Domingo".equals(dia)){
+valorFinal=costoMinutos*1.03F;
+}
+if(dia=="Sabado"){
+valorFinal=costoMinutos;
+}else{
+System.out.println("¿La llamada fue en horario diurno o vespertino?");
+String horario=lector.next();
+if(horario=="diurno"){
+valorFinal=costoMinutos*1.15F;
+
+}else{
+valorFinal=costoMinutos*1.10F;
+
+}
+
+}
+System.out.println("el costo de la llamada es " + valorFinal);
+
+
+
+}
+
+}
+
+Ejercicio 5)
+
+package promedio_notas_por_usuario;
+// 13/5/2021
+import java.util.Scanner;
+
+public class Promedio_Notas_Por_Usuario {
+   
+    public static void main(String[] args) {
+         Scanner leer =  new Scanner(System.in);
+int notas;
+
+System.out.print("ingrese cantidad de notas:");
+notas = leer.nextInt();
+
+int suma = 0;
+int prom = 0; 
+int nota = 0;
+
+for(int i=1; i<= notas; i++){
+    System.out.println("ingrese nota"+" "+i+" "+"de"+" "+notas+":");
+    nota = leer.nextInt();          
+    suma = suma + nota;
+}
+
+prom = suma / notas;
+System.out.println("promedio de las notas:"+prom );
+    
+    }
+    
+}
