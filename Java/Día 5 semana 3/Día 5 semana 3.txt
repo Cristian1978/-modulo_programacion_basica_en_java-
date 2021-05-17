@@ -1,0 +1,133 @@
+1)como realizar un algoritmo en java con (mientras, hacer mientras y para ) calcular la suma de los numeros
+ que sean multiplos de 9 que se encuentran de 1 a 100
+
+package esudiojavavier;
+import java.util.Scanner;
+public class EsudioJavaVier {
+    //14/5/2021
+    //Numeros primos
+    public static void main(String[] args) {
+      
+        Scanner entrada = new Scanner (System.in);
+        int numero1;
+        int numero2;
+        System.out.println("Ingresa el primer numero ");
+        numero1 = entrada.nextInt ();
+        System.out.println("Ingresa el segundo numero ");
+        numero2 = entrada.nextInt ();
+        if (numero1 % numero2 == 0)
+        {
+            System.out.println ("Son Multiplos ");
+        }    
+        else    
+            System.out.println (" No son Multiplos ");
+        
+             
+    }
+    
+}
+   
+
+
+
+
+2)calcular la multiplicacion de n numeros ingresados por el usuario que sean numeros 
+primos
+
+package calcularnnumvier;
+import java.util.Scanner;
+
+public class CalcularNnumVier {
+    
+    public static void main(String[] args) {
+    Scanner leer = new Scanner(System.in);
+        int limite;
+        int suma=0;
+        int multiplo;
+                
+        System.out.println("Ingresa el limite  ");
+        
+        limite = leer.nextInt();
+        System.out.println("Ingrese el multiplo ");
+        multiplo = leer.nextInt();
+        
+        
+        for(int i=1;i<=limite;i++){
+         
+        if (i%multiplo==0){
+            System.out.println(i);
+            suma=suma+i;
+            
+        }
+        }
+        
+        System.out.println("La suma de los Multiplos es "+suma);
+    }
+}
+
+    
+
+
+
+3)Ingresar numeros pares ingresados por el usuario determinar
+ la cantidad de numeros multiplos de 5 que ingresaron
+
+package multiplosde5vier;
+
+import java.util.Scanner;
+public class MultiplosDe5Vier {
+    
+    public static void main(String[] args) {
+      int num;
+int multiplo;
+int suma=0;
+int i;
+int lim;
+Scanner leer=new Scanner(System.in);
+System.out.println("ingrese la cantidad de numeros: ");
+lim=leer.nextInt();
+System.out.println("ingrese multiplo : ");
+multiplo=leer.nextInt();
+
+for (i=1;i<=lim;i++){
+System.out.println("ingrese numero : ");
+num=leer.nextInt();
+if (num%multiplo==0){suma=suma+1;}
+
+}
+System.out.println("cantidad de numeros ingresados que son multiplos de "+multiplo+ " es "+suma);
+
+}
+}
+
+
+
+4)sumar los numeros pares e impares ingresados por un usuario y contar
+la cantidad de numeros pares e impares(la cantidad de numeros que se ingresan
+debe ser determinada por el usuario) 
+
+
+package sumarnumpeivier;
+
+import java.util.Scanner;
+
+public class SumarNumPeIvier {
+
+    public static void main(String[] args) {
+      Scanner leer=new Scanner(System.in);
+        System.out.println("Ingrese un numero ");
+        int n=leer.nextInt();
+        int dig=0, suma=0;
+        while(n>0){
+            dig=n%10;
+        
+            if(dig%2==0){
+                suma=suma+dig;
+            }  
+            n/=10;
+        }
+        System.out.println("La suma es"+ suma);
+    }
+    
+}
+	
