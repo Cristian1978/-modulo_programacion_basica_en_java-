@@ -1,0 +1,155 @@
+Ejercicio 1)
+
+Inventar tres ejercicios con ciclos iterativos (while, do while y for) y uno con ciclo switch.
+
+
+1.Programa con ciclo for
+
+package ciclofor;
+import java.util.Scanner;
+/**
+//18/5/2021
+ * @author Cristian Maturana
+ */
+public class CicloFor {
+
+    
+    public static void main(String[] args) {
+       
+    Scanner scanner = new Scanner(System.in);
+    int i;
+    for( i=0 ; i < 100 ; i = i +2){
+        System.out.println(i);
+    }
+    }
+    
+}
+
+
+2.
+
+package ciclositerativosswich;
+//18/5/2021
+import java.util.Scanner;
+/**
+ *
+ * @author Cristian Maturana
+ */
+public class CiclosIterativosSwich {
+
+   
+    public static void main(String[] args) {
+       Scanner entrada = new Scanner(System.in);
+       int i=1,contador;
+       
+        System.out.println("Digite cuantos numeros quiere en pantalla ");
+       contador = entrada.nextInt();
+       while (i<=contador){
+        System.out.println(i);
+        i++;
+       
+
+3.
+
+package ejerdowhile;
+import java.util.Scanner;
+/**
+//18/5/2021
+ * @author Cristian Maturana
+ */
+public class EjerDoWhile {
+
+    public static void main(String[] args) {
+      
+    int a;
+    Scanner S = new Scanner(System.in);
+    do{
+     System.out.println("1. Enseñar por pantalla buen día!!! ");
+     System.out.println("2. Enseñaremos por pantalla los numeros entre 5 y 10.");
+     System.out.println("3. Enseñar por pantalla Empieza a Programar! ");
+     System.out.println("Introduce una opción: ");
+     a = S.nextInt();
+    }while(a < 3 );
+     
+    switch(a){
+        case 1:
+            System.out.println("Hola amigos!!! ");
+            break;
+        case 2:
+            for(int i = 5; i < 10; i++){
+            System.out.print(i+""); 
+        }
+            break;
+        case 3:
+            System.out.println("Vamos aprendiendo!!! ");
+            break;
+        default:
+            System.out.println("La opción ingresada no es valída ");
+            break;
+    }
+    }
+    
+    
+}
+
+
+
+
+
+Ejercicio 2)
+
+Crear un un programa con switch
+
+
+
+Ejercicio 3)
+
+Realizar un programa que lea tres numeros enteros H,M,S correspondiente a hora,
+minutos y segundos respectivamente, y comprueba si la hora qu indican es uha
+hora válida. Supondremos que si leemos una hora en modo 24 horas, es dicir, el
+valor válido para los minutos y segundos estará comprendido entre 0 y 59 ambos
+incluidos
+
+nota:Programa que lea por teclado tres números enteros H, M, S correspondientes a hora, minutos y segundos respectivamente, y comprueba sila hora que indican es una hora válida.
+
+Supondremos que se leemos una hora en modo 24 Horas, es decir, el valor válido para las horas será mayor o igual que cero y menor que 24.
+
+El valor válido para los minutos y segundos estará comprendido entre 0 y 59 ambos incluidos
+
+
+package ejechoracorrecta;
+import java.util.Scanner;
+/**
+//18/5/2021
+ * @author Cristian Maturana
+ */
+public class EjecHoraCorrecta {
+
+    
+    public static void main(String[] args) {
+        
+        int H,M,S;
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.print("Introduzca hora: ");
+        H =  sc.nextInt();
+        System.out.print("Introduzca minutos: ");
+        
+        M =  sc.nextInt();
+        System.out.print("Introduzca segundos: ");
+        
+        S =  sc.nextInt();
+        if(H>=0 && H<24 && M>=0 && M<60 && S>=0 && S<60)                                                          
+           System.out.println("Hora correcta");
+        else
+            System.out.println("Hora incorrecta"); 
+    }
+    
+}
+
+nota: En este ultimo ejercicio esta condición da como resultado true cuando la hora es mayor o igual a 0 y menor que 24,
+los minutos son mayores o iguales a 0 y menores que 60 y los segundos son mayores 0 iguales a cero y menores a 60.
+
+Como reflexión tomo la idea, y me doy cuenta, que a medida que hago ejercicios ya sea en clases o por mi cuenta,
+uno va recordando errores y va mejorando sobre la marcha, y empiezo a reconocer mejor las distintas formas
+de solucion para los ejercicios.
