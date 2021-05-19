@@ -1,0 +1,208 @@
+Ejercicio 1)
+
+Hacer un programa que simule una calculadora donde el usuario pueda seleccionar
+entre las 4 opera básicas (suma-resta-multiplicación y división) y que además
+permita poder volver a seleccionar una operación
+
+
+package calculadora;
+import java.util.Scanner;
+
+public class Calculadora {
+
+    
+    public static void main(String[] args) {
+          
+        Scanner obj=new Scanner(System.in);
+        int val1, val2, resultado, respuesta;
+        
+        System.out.println("Ingresa el primer numero ");
+        val1=obj.nextInt();
+        System.out.println("Ingresa el segundo numero ");
+        val2=obj.nextInt();
+        System.out.println("¿Que desea  hacer con estos valores? ");
+        System.out.println("Teclee la opción correspondiente a la operación que desea");
+        System.out.println("1._Suma 2._Resta 3._Multiplicación 4._División");
+        respuesta=obj.nextInt();
+        
+        switch(respuesta){
+            case 1:
+               resultado=val1+val2;
+               System.out.println("La Suma es igual a: "+resultado);
+               break;
+            case 2:
+               resultado=val1-val2;
+                System.out.println("La Resta es igual a: "+resultado);
+               break;
+            case 3:
+               resultado=val1*val2;
+               System.out.println("La Multiplicación es igual a: "+resultado);
+               break;
+               case 4:
+               resultado=val1/val2;
+               System.out.println("La División es igual a: "+resultado);
+               break;
+        }
+    }
+    
+}
+
+
+Ejercicio 2)
+
+hacer un programa que simule un cajero bancario, este cajero tendrá una cuenta con un saldo inicial, 
+y deberá poder realizar las siguientes operaciones.
+
+- Consultar saldo
+
+- Realizar abono o deposito
+
+- Realizar giros
+
+- Por cada transacción debe indicar el saldo disponible en la cuenta
+
+- Las operaciones se deben poder realizar la cantidad de veces que  el usuario requiera
+
+- Salir del programa
+
+Nota: Se pueden agregar más funciones.
+
+
+package cajero;
+
+import java.util.Scanner;
+
+
+public class Cajero {
+
+    
+    public static void main(String[] args) {
+        Scanner lector= new Scanner (System.in);   
+     int clave=123;
+     int saldo=500000;
+     int valor_aretirar;
+     int clave_leida;
+     int opcion=0;
+     int cantidadAtransferir=0;
+     int cuentaAtransferir;
+     int operaciones [] = new int[5];
+     int k=0;
+    // arreglo operaciones de tipo entero
+          
+      System.out.print("ingrese la clave: ");
+        //clave_leida=Integer.parseInt(lector.next());
+         clave_leida = lector.nextInt();
+         if(clave==clave_leida) {
+             
+                                
+          do {
+         
+             System.out.println(" Bienvenido al cajero ATSteven **");
+             System.out.println("     Seleccione uan opcion     ");
+             System.out.println("***************");
+             System.out.println("1. Retirar efectivo");
+             System.out.println("2. Cambiar clave");
+             System.out.println("3. Realizar transferencia");
+             System.out.println("4. Ver ultimos movimientos");
+             System.out.println("5. Consultar saldo");
+             System.out.println("6. Salir ");
+             
+             opcion=lector.nextInt();
+            switch(opcion){
+                case 1:
+                    operaciones[k]=opcion;
+                 System.out.println("1. Retirar efectivo");
+                 System.out.println("Por favor ingrese la cantidad a retirar");
+                      valor_aretirar = lector.nextInt();
+                      if (valor_aretirar <= saldo ) {
+                          saldo = saldo - valor_aretirar;
+                         System.out.println("Su nuevo saldo es: " + saldo);
+                      } else {
+                          System.out.println("Fondos Insuficientes, su saldo es: " + saldo);
+                      }
+                      k++;
+                 break;
+                case 2:
+                    operaciones[k]=opcion;
+                 System.out.println("2. Cambiar clave");
+                 System.out.println("Por favor ingrese su nueva clave");
+                        clave = lector.nextInt();
+                        System.out.println("Su nueva clave es "+clave);
+                        k++;
+                 break;
+                case 3:
+                    operaciones[k]=opcion;
+                 System.out.println("3. Realizar transferencia");
+                 System.out.println("Por favor ingrese el valor que desea transferir ");
+                    cantidadAtransferir = lector.nextInt();
+                    if (cantidadAtransferir <= saldo ){
+                        saldo = saldo - cantidadAtransferir;
+                        System.out.println("Digite el numero de cuenta al que desea transferir");
+                        cuentaAtransferir = lector.nextInt();
+                        System.out.println("Ud realizo una transaccion al numero de cuenta "+cuentaAtransferir+" por valor de "+cantidadAtransferir);
+                        System.out.println("Su nuevo saldo es de "+saldo);
+                 } else{
+                        System.out.println("Ud No tiene fondos suficientes para realizar esta transferencia , su saldo es de "+saldo);
+                    }
+                    k++;
+                 break;
+                case 4:
+                    
+                 System.out.println("4. Ver ultimos movimientos");
+                
+
+              if (operaciones.length ==0) {
+
+                  System.out.println("Ud no tiene ultimos movimientos");
+
+             } else {
+                 for (int j=0; j<operaciones.length; j++){
+                       switch(operaciones[j]) {
+                           case 1:
+                               System.out.println("Realizo un reiro");
+                               break;
+                           case 2:
+                               System.out.println("Realizo un cambio de clave");
+                               break;    
+                           case 3:
+                               System.out.println("Realizo una transferencia");
+                               break;
+                           case 4:
+                               System.out.println("Listo sus ultimos movimientos");
+                               break;   
+                          case 5:
+                               System.out.println("Consultó su saldo");
+                               break;     
+                       }
+                 }    
+               }
+                 break;
+                 case 5:
+                    operaciones[k]=opcion;
+                 System.out.println("5. Consultar saldo");
+                 System.out.println("Su saldo es de : "+ saldo);
+                 k++;
+                 break;
+                case 6:
+                 System.out.println("6. Salir ");
+                  System.out.println("Gracias por usar nuestro cajero...");
+                      
+                  System.exit(0);
+                 break;
+                default:
+                 System.out.println("NO Selecciono una opcion valida");
+                
+        }
+        
+            System.out.println("Para seguir digite 0, para salir digite 6");
+               opcion = lector.nextInt();
+            } while (opcion != 6);
+    }  else {
+             System.out.println(" La Clave es incorrecta...");
+         }
+}
+    
+}
+    
+Nota: Investigar sobre arreglos (Array)   
+
