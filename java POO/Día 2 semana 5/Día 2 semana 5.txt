@@ -1,0 +1,126 @@
+investigar modelo vista controlado
+
+hoy hablamos del metodo constructor
+
+crear metodos constructores
+
+package metodosobjetos;
+
+/**
+ *
+ * @author Cristian maturana
+ */
+public class MetodosObjetos {
+
+    private static Class1 Class1;
+
+    public static void main(String[] args) {
+         
+        Class1 = new Class1();
+        System.out.println("Su nombre es: " + Class1.getNombre());
+        
+        Class1 = new Class1();
+        System.out.println("Su edad es: " + Class1.getEdad());
+        
+        Class1 = new Class1();
+        System.out.println("Su estatura es: " + Class1.getEstatura());
+        
+        Class1 = new Class1();
+        System.out.println("Usted camina: " + Class1.getCamina());
+        
+        
+    }
+    
+}
+
+package metodosobjetos;
+
+/**
+ *
+ * @author Cristian Maturana
+ */
+
+//Atributos
+public class Class1 {
+    private String nombre;
+    private int edad;
+    private double estatura;
+    private char sexo;
+    private String camina;
+    private String come;
+    private double kilometros;
+    private String vive;
+    private String apellido;
+//Constructores  
+     public Class1()
+{
+      this.camina = "Mucho";
+      this.nombre = "pedro";
+      this.edad = 25;
+      this.estatura = 1.7;
+      this.sexo ='m';
+      this.apellido = "Maldonado ";
+}
+
+    public Class1(String nombre, int edad, double estatura, char sexo)
+{
+      this.nombre =nombre;
+      this.edad = edad;
+      this.estatura = estatura;
+      this.sexo = sexo;
+      this.estatura = 1.7;
+}
+   
+
+     public String getNombre()
+{
+        return nombre;    
+}        
+     
+    // metodos Get y Set
+     
+    public void setNonmbre(String nombre){
+        
+        this.nombre=nombre;
+        
+    }
+    public String getApellido(){
+        
+        return apellido;
+    }
+    
+    public int getEdad(){
+    
+        return edad;
+       
+    } 
+    
+    public double getEstatura(){
+        
+        return estatura;
+
+
+    }
+    public String getCamina(){
+        
+        return camina;
+        
+    }
+    
+}
+    
+        
+    
+
+    
+
+
+crear metodos get y set
+
+*investigar encapsulamiento
+
+hoy se vio en la clase el 
+metodo costructor, Un constructor es un método especial de una clase que se llama automáticamente
+siempre que se declara un objeto de esa clase. Su función es inicializar el objeto y sirve para 
+asegurarnos que los objetos siempre contengan valores válidos.
+Estudiamos los metodos set y get.

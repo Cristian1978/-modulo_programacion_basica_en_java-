@@ -1,0 +1,72 @@
+Ejercicio 1)
+
+Crear 3 clases con sus respectivos atributos, métodos y crear distintas instancias
+
+package javapoo;
+
+public class JavaPOO {
+
+    
+    public static void main(String[] args) {
+    // Declaración de variables
+    // Instrucciones, operaciones matemáticas y desarrollo total
+    // del programa
+    Persona Cristian = new Persona();
+    Cristian.nombre = "Cristian";
+    Cristian.edad = 0;
+        System.out.println("Cristian ha comido, y dice: ");
+    Cristian.comer();
+        Caminar Caminar = new Caminar();
+        System.out.println("Cristian camino 10 kilometros, y dice: Buen Ejercicio ");
+
+package javapoo;
+
+import java.util.Scanner;
+public class Caminar {
+    
+int kilometros = 0; 
+String cantidad;
+void camine(){
+    System.out.println("Cuanto camine? ");
+    
+    Scanner Scanner = new Scanner(System.in);
+ if (kilometros > 9) {
+    System.out.println("Buen ejercicio "+kilometros);
+} else {
+    System.out.println("Estube flojo ");
+}
+}
+}    
+ 
+package javapoo;
+
+
+public class Persona {
+   
+   String nombre;
+   int edad;
+   
+   Persona(){
+     nombre = "";
+     edad = 0;
+       
+    }
+   
+   void comer(){
+       
+       System.out.println("Buena comida ");   
+   }
+   void nombre(){
+       
+   }        
+}
+   
+
+    
+        
+
+
+*investigar sobre los Arrays
+
+Hoy el profesor hablo de los atributos y metodos, dando ejemplos, compartiendo su pantalla,
+que en mi opinión uno entiende mejor los conceptos a comprender.
