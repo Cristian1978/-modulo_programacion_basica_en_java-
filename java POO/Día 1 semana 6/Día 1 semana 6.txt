@@ -1,0 +1,103 @@
+herencia polimorfismo
+abtraccion
+metodos 
+clases
+Crear una superclase Electrodoméstico con sus respectivos atributos y métodos 
+propios de la clase, luego a partir de esta clase crear como mínimo tres subclases.
+
+public class Electrodomesticos {
+    private String nombre;
+    private String marca;
+    private String utilidad;
+    private int codigo;
+    private String color;
+    
+    public Electrodomesticos(String nombre, String marca, String utilidad, int codigo, String color){
+        this.nombre = nombre;
+        this.marca = marca;
+        this.utilidad = utilidad;
+        this.codigo = codigo;
+        this.color = color;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public String getUtilidad() {
+        return utilidad;
+    }
+
+    public int getCodigo() {
+        return codigo;
+    }
+
+    
+    }
+
+    
+    
+    
+public class Lavadora extends Electrodomesticos{
+    
+    private String condicion;
+    private double carga;
+    
+    //Constructor
+    public Lavadora(String nombre, String marca, String utilidad,
+        int codigo, String color, String condicion, double carga){
+        super(nombre, marca, utilidad, codigo, color);
+        this.condicion = condicion;
+        this.carga = carga;
+           
+    }
+    public void mostrarDatos(){
+        System.out.println("Nombre: "+getNombre()+
+                "\nMarca: "+getMarca()+
+                "\nUtilidad:"+getUtilidad()+
+                "\nCondicion: "+condicion+
+                "\nCarga: "+carga);
+                
+                }
+}
+                
+public class Televisor extends Electrodomesticos {
+    private String condicion;
+    private double carga;
+    
+    public Televisor(String nombre, String marca, String utilidad,
+        int codigo, String color, String condicion, double consumo){
+        super(nombre, marca, utilidad, codigo, color);
+        this.condicion = condicion;
+        this.carga = carga;
+        
+    
+    }    
+}
+
+public class Principal {
+    public static void main(String args []){
+        Lavadora lavadora = new Lavadora("Lavadora ", "Fensa ", " Lavar ", 456, "color", "En buen Estado ", 12);
+        
+        lavadora.mostrarDatos();
+        
+        Televisor televisor = new Televisor("nombre", "marca", "Transmitir  ", 789, "color", "Reparar ", 100);
+        
+        lavadora.mostrarDatos();
+    }
+    
+}
+
+
+revisar sobre las pruebas unitarias
+
+Crear una superclase Persona con sus respectivos atributos y metodos propios de la clase, luego a partir de esa clase como mínimo tres subclases (hacer métodos abstractos).
+
+herencia polimorfismo
+abtraccion
+metodos 
+clases

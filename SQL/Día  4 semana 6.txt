@@ -1,0 +1,21 @@
+
+create database pruebadb character set utf8;
+
+use pruebadb;
+create table primeraTabla(
+id_primeraT int auto_increment,
+nombre varchar(20),
+estatura float,
+fechaNacimiento date,
+descripcion text,
+primary key(id_primeraT)
+
+);
+use pruebadb;
+create table segundaTabla(
+nombre2 varchar(52),
+estatura float,
+fechaNacimiento date,
+atributo text);
+alter table   primeraTabla modify column edad int;
+

@@ -1,0 +1,140 @@
+Crear una superclase Persona con sus respectivos atributos y métodos propios
+de la clase, luego a partir de esta clase crear como mínimo tres subclases.
+
+public class Persona {
+    private String nombre;
+    private String apellido;
+    private int edad;
+
+    public Persona(String nombre, String apellido, int edad) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.edad = edad;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public String getApellido() {
+        return apellido;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+    
+    
+    
+}
+
+public class Estudiante extends Persona{
+    private int codigoEstudiante;
+    private float notaFinal;
+    
+    //Constructor
+    public Estudiante(String nombre,String apellido, int edad, int codigoEstudiante, float notaFinal){
+        super(nombre, apellido, edad);
+        this.codigoEstudiante = codigoEstudiante;
+        this.notaFinal = notaFinal;
+   }
+    
+    public void mostrarDatos(){
+        System.out.println("Nombre "+getNombre()+
+                "\nApellido: "+getApellido()+
+                "\nEdad: "+getEdad()+
+                "\ncodigo Estudiante: "+codigoEstudiante+
+                "\nNota Final "+notaFinal);
+    }
+
+}
+
+public class Principal {
+    public static void main(String args[]){
+        Estudiante estudiante = new Estudiante("Cristian", "Maturana",42,123,15.6f);
+        
+        estudiante.mostrarDatos();
+        
+       
+    }
+}
+
+Ejemplo de Herencia
+
+public class SeleccionFutbol
+{
+
+	protected int id;
+	protected String Nombre;
+	protected String Apellidos;
+	protected int Edad;
+
+	// constructor, getter y setter
+
+	public void Concentrarse() {
+		...
+	}
+
+	public void Viajar() {
+		...
+	}
+}
+
+public class Futbolista extends SeleccionFutbol
+{
+	private int dorsal;
+	private String demarcacion;
+
+        public Futbolista() {
+		super();
+	}
+
+	// getter y setter
+
+	public void jugarPartido() {
+		...
+	}
+
+	public void entrenar() {
+		...
+	}
+}
+
+
+public class Entrenador extends SeleccionFutbol
+{
+
+	private String idFederacion;
+
+        public Entrenador() {
+		super();
+	}
+
+	// getter y setter
+
+	public void dirigirPartido() {
+		...	
+	}
+
+	public void dirigirEntreno() {
+		...
+	}
+}
+
+public class Masajista extends SeleccionFutbol
+{
+
+	private String Titulacion;
+	private int aniosExperiencia;
+
+        public Masajista() {
+		super();
+	}
+
+	// getter y setter
+
+	public void darMasaje() {
+		...
+	}
+}
+ 
