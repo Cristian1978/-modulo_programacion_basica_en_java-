@@ -1,0 +1,45 @@
+Hoy vimos los dos tipos de operaciones en sql DML DDL
+
+create database instituto;
+use instituto;
+create table alumno(
+IDalumno int not null auto_increment,
+NIE int (10) not null,
+nombre_est varchar (40) not null,
+apellidos_est varchar (40) not null,
+responsable varchar(40) not null,
+primary key (IDalumno)
+) engine=innoDB;
+
+create table profesor(
+IDprofesor int not null auto_increment,
+NIP int (10) not null,
+nombre_prof varchar (40) not null,
+apellidos_prof varchar (40) not null,
+especialidad varchar(40) not null,
+primary key (IDprofesor)
+) engine=innoDB;
+
+
+create database universidad;
+use universidad;
+create table alumno(
+IDalumno int not null auto_increment,
+NIE int (10) not null,
+nombre_est varchar (40) not null,
+apellidos_est varchar (40) not null,
+responsable varchar (40) not null,
+primary key (IDalumno)
+) engine=innoDB;
+
+create table profesor(
+IDprofesor int not null auto_increment,
+NIP int (10) not null,
+nombre_prof varchar (40) not null,
+apellidos_prof varchar (40) not null,
+responsable varchar (40) not null,
+primary key (IDprofesor)
+) engine=innoDB;
+	
+Reflexión: Hoy estoy entendiendo el lenguaje mySql, se me han aclarado varias
+dudas sobre el modo de trabajar con este lenjuage que en principio me costo entender.

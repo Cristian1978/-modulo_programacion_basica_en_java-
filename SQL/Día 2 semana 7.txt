@@ -1,0 +1,105 @@
+create database biblioteca;
+use biblioteca;
+create table empleado(
+IDempleado int auto_increment,
+nombre varchar(20),
+apellidoP varchar (40),
+apellidoM varchar (40),
+edad int (10),
+departamento varchar (40),
+cargo varchar (40),
+sueldo int (10),
+primary key (IDempleado)
+) engine=innoDB;
+
+create table libro(
+IDlibro int auto_increment,
+nombre varchar (40),
+autor varchar (40),
+editorial varchar(40),
+edicion year,
+añoPublicacion year,
+categoria varchar(40),
+ejemplares int(10),
+primary key (IDlibro)
+) engine=innoDB;
+
+create table insumos(
+IDinsumos int auto_increment,
+tipoLimpieza varchar (40),
+Nombre varchar (40),
+tipoHardware varchar (40),
+costo1 int (10),
+codigoInsumo int (30),
+primary key (IDinsumos)
+) engine=innoDB;
+
+create database biblioteca;
+use biblioteca;
+create table empleado(
+IDempleado int auto_increment,
+nombre varchar(20),
+apellidoP varchar (40),
+apellidoM varchar (40),
+edad int (10),
+departamento varchar (40),
+cargo varchar (40),
+sueldo int (10),
+primary key (IDempleado)
+) engine=innoDB;
+
+create table libro(
+IDlibro int auto_increment,
+nombre varchar (40),
+autor varchar (40),
+editorial varchar(40),
+edicion year,
+añoPublicacion year,
+categoria varchar(40),
+ejemplares int(10),
+primary key (IDlibro)
+) engine=innoDB;
+
+create table insumos(
+IDinsumos int auto_increment,
+tipoLimpieza varchar (40),
+Nombre varchar (40),
+tipoHardware varchar (40),
+costo1 int (10),
+codigoInsumo int (30),
+primary key (IDinsumos)
+) engine=innoDB;
+
+INSERT INTO empleado (nombre, apellidoP, apellidoM, edad, departamento, cargo, sueldo)
+VALUES ('Raul', 'Perez', 'Salas', '23', 'jefatura', 'jefe', '1800000');
+INSERT INTO empleado (nombre, apellidoP, apellidoM, edad, departamento, cargo, sueldo)
+VALUES ('Marcos', 'Lara', 'Mujica', '32', 'Aseo', 'Auxiliar', '380000');
+INSERT INTO empleado (nombre, apellidoP, apellidoM, edad, departamento, cargo, sueldo)
+VALUES ('Claudia', 'Soto', 'Morales', '26', 'soporte', 'Asistente', '650000');
+INSERT INTO empleado (nombre, apellidoP, apellidoM, edad, departamento, cargo, sueldo)
+VALUES ('Pedro', 'Ponce', 'Tapia', '35', 'soporte', 'administracion', '850000');
+INSERT INTO empleado (nombre, apellidoP, apellidoM, edad, departamento, cargo, sueldo)
+VALUES ('Mirna', 'Maturana', 'Salas', '23', 'bodega', 'adquisiciones', '580000');
+INSERT INTO empleado (nombre, apellidoP, apellidoM, edad, departamento, cargo, sueldo)
+VALUES ('Rodrigo', 'Ibarra', 'Mujica', '42', 'zona telematica', 'soporte', '580000');
+
+select * from empleado where cargo <> 'junior';
+select nombre, apellidoP, sueldo, departamento from empleado where sueldo between 580000 and 1800000;
+select * from empleado;
+
+select * from empleado where nombre like 'c%';
+select * from empleado where nombre like '%a';
+select * from empleado where nombre like '%a%';
+ 
+ 
+'2', 'Claudio', 'Riquelme', 'Soto', '32', 'RR.HH', 'Junior', '480000'
+'5', 'Cristian', 'Gonzales', 'Rosas', '42', 'bodega', 'Personal', '480000'
+
+select * from empleado where sueldo between '380000' and '580000';
+
+'2', 'Claudio', 'Riquelme', 'Soto', '32', 'RR.HH', 'Junior', '480000'
+'5', 'Cristian', 'Gonzales', 'Rosas', '42', 'bodega', 'Personal', '480000'
+
+Reflexión: hoy vimos varias formas de sentencias, con los ejemplos que nos da
+el profesor me a quedado muy claro para que son necesarias y en que momentos 
+se deben utilizar, me siento conforme con lo aprendido hoy.
