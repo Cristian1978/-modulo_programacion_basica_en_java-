@@ -1,0 +1,80 @@
+
+create database biblioteca;
+use biblioteca;
+create table empleado(
+IDempleado int auto_increment,
+nombre varchar(20),
+apellidoP varchar (40),
+apellidoM varchar (40),
+edad int (10),
+departamento varchar (40),
+cargo varchar (40),
+sueldo int (10),
+primary key (IDempleado)
+) engine=innoDB;
+
+create table libro(
+IDlibro int auto_increment,
+nombre varchar (40),
+autor varchar (40),
+editorial varchar(40),
+edicion int (20),
+añoPublicacion int (20),
+categoria varchar(40),
+ejemplares int (20),
+primary key (IDlibro)
+) engine=innoDB;
+
+create table insumos(
+IDinsumos int auto_increment,
+tipoLimpieza varchar (40),
+Nombre varchar (40),
+tipoHardware varchar (40),
+costo1 int (10),
+codigoInsumo int (30),
+primary key (IDinsumos)
+) engine=innoDB;
+
+INSERT INTO empleado (nombre, apellidoP, apellidoM, edad, departamento, cargo, sueldo)
+VALUES ('Raul', 'Perez', 'Salas', '23', 'jefatura', 'jefe', '1800000');
+INSERT INTO empleado (nombre, apellidoP, apellidoM, edad, departamento, cargo, sueldo)
+VALUES ('Marcos', 'Lara', 'Mujica', '32', 'Aseo', 'Auxiliar', '380000');
+INSERT INTO empleado (nombre, apellidoP, apellidoM, edad, departamento, cargo, sueldo)
+VALUES ('Claudia', 'Soto', 'Morales', '26', 'soporte', 'Asistente', '750000');
+INSERT INTO empleado (nombre, apellidoP, apellidoM, edad, departamento, cargo, sueldo)
+VALUES ('Pedro', 'Ponce', 'Tapia', '35', 'soporte', 'administracion', '850000');
+INSERT INTO empleado (nombre, apellidoP, apellidoM, edad, departamento, cargo, sueldo)
+VALUES ('Mirna', 'Maturana', 'Salas', '23', 'bodega', 'adquisiciones', '580000');
+INSERT INTO empleado (nombre, apellidoP, apellidoM, edad, departamento, cargo, sueldo)
+VALUES ('Rodrigo', 'Ibarra', 'Mujica', '42', 'zona telematica', 'soporte', '580000');
+INSERT INTO empleado (nombre, apellidoP, apellidoM, edad, departamento, cargo, sueldo)
+VALUES ('Jose', 'Mardones', 'Guajardo', '56', 'bodega', 'adquisiciones', '580000');
+INSERT INTO empleado (nombre, apellidoP, apellidoM, edad, departamento, cargo, sueldo)
+VALUES ('Rodrigo', 'Dasa', 'Cotapos', '42', 'zona telematica', 'soporte', '580000');
+
+
+select * from empleado where cargo <> 'junior';
+select nombre, apellidoP, sueldo, departamento from empleado where sueldo between 580000 and 1800000;
+select * from empleado where sueldo between '380000' and '580000';
+
+select * from empleado where nombre like 'a%';
+select * from empleado where nombre like '%a';
+select * from empleado where nombre like '%a%'; 
+select * from empleado order by nombre desc;
+select * from empleado order by nombre asc;
+select * from empleado order by sueldo desc;
+select * from empleado order by sueldo asc;
+select * from empleado order by departamento;
+select * from empleado order by apellidoP;
+select * from empleado order by edad <> 30;
+select count(departamento) as 'cantidad de empleados', departamento from empleado group by departamento;
+select max(edad) from empleado;
+select min(edad) from empleado;
+select avg(sueldo) from empleado;
+select avg(edad) from empleado;
+select count(cargo) as 'cargos', cargo from empleado group by cargo; 
+
+Reflexión: Hoy estudiamos las consultas de selecccion (order by, select max(),
+select min(), select avg()), me quedo claro su forma de implementar.
+El profesor nos dio ejemplos concretos, que me ayudaron a comprender mejor las
+consultas de selección.
